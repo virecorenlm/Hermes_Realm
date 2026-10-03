@@ -1,0 +1,14 @@
+[Unit]
+Description=Hermes Realm voice pipeline
+After=network.target
+
+[Service]
+Type=simple
+EnvironmentFile=-%h/.config/hermes-realm/secrets/voice.env
+WorkingDirectory=%h/Hermes_Realm
+ExecStart=/usr/bin/env python3 %h/Hermes_Realm/scripts/voice_pipeline_v3.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=default.target

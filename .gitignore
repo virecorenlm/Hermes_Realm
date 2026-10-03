@@ -1,0 +1,24 @@
+# Secrets
+*.env
+!.env.example
+*.env.*
+!*.env.example
+PUBLIC_AUDIT.md
+**/secrets/
+**/state/
+**/logs/
+**/reports/
+**/snapshots/
+**/recordings/
+*.wav
+
+__pycache__/
+*.py[cod]
+
+# Workforce runtime artifacts (created by ensure_layout / agent ticks)
+workforce/agents/
+workforce/reports/
+workforce/logs/
+workforce/inbox/
+workforce/outbox/
+workforce/data/

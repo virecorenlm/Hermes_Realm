@@ -1,0 +1,11 @@
+# Optional drop-in example for an ARM64 Redis allocator compatibility issue.
+# Adapt and test against your distribution's service before installing.
+[Unit]
+Description=Redis with libc malloc (jemalloc incompatible with 16KB ARM64 pages)
+
+[Service]
+Type=simple
+Environment=MALLOC=libc
+ExecStart=
+ExecStart=/usr/bin/redis-server /etc/redis/redis.conf
+Restart=on-failure

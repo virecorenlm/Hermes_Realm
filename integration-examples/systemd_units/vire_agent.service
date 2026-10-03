@@ -1,0 +1,14 @@
+[Unit]
+Description=Hermes Realm trusted task runner
+After=network.target
+
+[Service]
+Type=simple
+EnvironmentFile=-%h/.config/hermes-realm/secrets/realm.env
+WorkingDirectory=%h/Hermes_Realm
+ExecStart=/usr/bin/env python3 %h/Hermes_Realm/scripts/vire_agent.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=default.target
