@@ -2,6 +2,25 @@
 
 Hermes Realm is a collection of scripts, skills, and patterns that extend [Hermes Agent](https://github.com/NousResearch/hermes) with optional voice, vector memory, vision experiments, scheduled status pulses, a trusted local task queue, and a file-backed workforce. It is an integration kit, not an installer or a fork of Hermes. Install Hermes separately using its upstream instructions.
 
+## New here?
+
+For a guided walkthrough of the folders, architecture, agents, skills, integrations, and what is actually shipped, see **[the Hermes Realm Project Map →](PROJECT_MAP.md)**.
+
+## First steps
+
+Install [Hermes Agent](https://github.com/NousResearch/hermes) separately if you have not already. Then clone this repository:
+
+```bash
+git clone https://github.com/virecorenlm/Hermes_Realm.git
+cd Hermes_Realm
+```
+
+Tell your Hermes agent the **absolute path** to your clone. You can give it this starting request, replacing the example path with your own:
+
+> I cloned Hermes Realm at `/path/to/Hermes_Realm`. Read its `README.md` and `PROJECT_MAP.md` first. Check what my Hermes setup already has, and ask me what parts of Realm I actually want to use. For anything you cannot verify—such as service URLs, models, audio devices, or account integrations—ask me for the needed information instead of guessing. Start with a one-computer setup. Show me a plan and get my approval before changing configuration, installing services, scheduling jobs, enabling task-execution gates, or connecting external accounts. Keep credentials in private files or environment variables, not in this repository or chat.
+
+You do **not** need every optional service or integration. If you only want to explore the project, ask Hermes to explain the map without setting anything up.
+
 ## Start on one computer
 
 Python 3 is needed for the scripts. `workforce/` uses only the Python standard library; other components have their own optional dependencies. From a checkout:
